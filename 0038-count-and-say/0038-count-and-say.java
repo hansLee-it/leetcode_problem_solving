@@ -1,12 +1,7 @@
 class Solution {
     public String countAndSay(int n) {
-        return encodRec(n);
-    }
-
-    public String encodRec(int n){
-        
-        if(n == 1) return String.valueOf(1);
-        String recResult = encodRec(n-1);
+        if(n == 1) return "1";
+        String recResult = countAndSay(n-1);
         String result = "";
         char base = recResult.charAt(0);
         int loopTime = 0;
